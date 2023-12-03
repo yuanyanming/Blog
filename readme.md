@@ -4,8 +4,6 @@
 * 完整的后台代码编写
 * 主流技术栈（SpringBoot,MybatisPlus,SpringSecurity,EasyExcel,Swagger2,Redis）
 * 完善细致的需求分析
-<<<<<<< HEAD
-=======
 
 
 
@@ -13,7 +11,7 @@
 
 ### 1.认证
 
-![image-20231204002825110](C:\Users\84799\AppData\Roaming\Typora\typora-user-images\image-20231204002825110.png)
+![image-20231204002825110](C:\Users\84799\IdeaProjects\SGBlog\img\image-20231204002825110.png)
 
 登录:
 
@@ -40,9 +38,6 @@
 ​				从redis中获取用户信息
 
 ​				存入SecurityContextHolder
-<<<<<<< HEAD
->>>>>>> 037176c (update)
-=======
 
 核心代码实现
 
@@ -64,4 +59,3 @@
 2.PermissionService（名称ps）类中自定义方法hasPermission
 
 3.方法上添加@PreAuthorize("@ps.hasPermission('content:category:export')")
->>>>>>> 94baa2b (secondupdate)
