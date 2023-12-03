@@ -11,7 +11,7 @@
 
 ### 1.认证
 
-![image-20231204002825110](C:\Users\84799\IdeaProjects\SGBlog\img\image-20231204002825110.png)
+![image-20231204002825110](img\image-20231204002825110.png)
 
 登录:
 
