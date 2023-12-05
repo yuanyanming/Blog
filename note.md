@@ -1,6 +1,14 @@
-# SpringSecurity
+# 博客
 
-## 1.介绍
+## 一、热门文章列表
+
+查询浏览量最高的前10篇文章的信息。要求展示文章标题和浏览量。把能让用户自己点击跳转到具体的文章详情进行浏览。
+
+
+
+## 二、登录功能
+
+### 1.SpringSecurity
 
  一般Web应用的需要进行**认证**和**授权**。
 
@@ -10,15 +18,15 @@
 
 ​	而认证和授权也是SpringSecurity作为安全框架的核心功能。
 
-## 2.认证
+### 2.认证
 
-### 2.1 登陆校验流程
+#### 2.1 登陆校验流程
 
 ![image-20211215094003288](C:\Users\84799\Documents\找工作\项目\博客\SpringSecurity\img\image-20211215094003288.png)
 
-### 2.2 原理初探
+#### 2.2 原理初探
 
-#### 2.2.1 SpringSecurity完整流程
+##### 2.2.1 SpringSecurity完整流程
 
 ​	SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各种功能的过滤器。这里我们可以看看入门案例中的过滤器。
 
@@ -42,7 +50,7 @@
 
 
 
-#### 2.2.2 认证流程详解
+##### 2.2.2 认证流程详解
 
 ![image-20211214151515385](C:\Users\84799\Documents\找工作\项目\博客\SpringSecurity\img\image-20211214151515385.png)
 
@@ -58,9 +66,9 @@ UserDetails接口：提供核心用户信息。通过UserDetailsService根据用
 
 
 
-### 2.3 解决问题
+#### 2.3 解决问题
 
-#### 2.3.1 思路分析
+##### 2.3.1 思路分析
 
 登录
 
@@ -88,7 +96,7 @@ UserDetails接口：提供核心用户信息。通过UserDetailsService根据用
 
 
 
-### 2.4 核心代码实现
+#### 2.4 核心代码实现
 
 1. 创建一个类实现UserDetailsService接口，重写其中的方法。更加用户名从数据库中查询用户信息
 
@@ -97,11 +105,11 @@ UserDetails接口：提供核心用户信息。通过UserDetailsService根据用
 
 
 
-## 3.授权
+### 3.授权
 
 总结起来就是**不同的用户可以使用不同的功能**。这就是权限系统要去实现的效果。
 
-### 3.1 授权基本流程
+#### 3.1 授权基本流程
 
 ​	在SpringSecurity中，会使用默认的FilterSecurityInterceptor来进行权限校验。在FilterSecurityInterceptor中会从SecurityContextHolder获取其中的Authentication，然后获取其中的权限信息。当前用户是否拥有访问当前资源所需的权限。
 
